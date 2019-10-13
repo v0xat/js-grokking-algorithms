@@ -2,10 +2,8 @@ max = (arr) => {
   if (arr.length === 0) {
     return 0;
   }
-  else { 
-    let sub_max = max(arr.slice(1));
-    return arr[0] > sub_max ? arr[0] : sub_max;
-  }
+  let sub_max = max(arr.slice(1));
+  return arr[0] > sub_max ? arr[0] : sub_max;
 }
 
 console.log(max([]));
