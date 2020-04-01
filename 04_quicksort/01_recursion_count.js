@@ -1,9 +1,10 @@
-count = (arr) => {
-    if (arr.length === 0) {
-      return 0;
-    }
-    return 1 + count(arr.slice(1));    
-}
+const count = (arr) => {
+	if (arr.length === 0) {
+		return 0;
+	}
+
+	return 1 + count(arr.slice(1));
+};
 
 console.log(count([]));
 console.log(count([3]));

@@ -1,10 +1,11 @@
-max = (arr) => {
-  if (arr.length === 0) {
-    return 0;
-  }
-  let sub_max = max(arr.slice(1));
-  return arr[0] > sub_max ? arr[0] : sub_max;
-}
+const max = (arr) => {
+	if (arr.length === 0) {
+		return 0;
+	}
+	const sub_max = max(arr.slice(1));
+
+	return arr[0] > sub_max ? arr[0] : sub_max;
+};
 
 console.log(max([]));
 console.log(max([6, 3]));
