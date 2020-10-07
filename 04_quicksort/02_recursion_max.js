@@ -1,10 +1,10 @@
 const max = (arr) => {
-	if (arr.length === 0) {
-		return 0;
-	}
-	const sub_max = max(arr.slice(1));
+  if (arr.length === 0) {
+    return 0;
+  }
+  const sub_max = max(arr.slice(1));
 
-	return arr[0] > sub_max ? arr[0] : sub_max;
+  return arr[0] > sub_max ? arr[0] : sub_max;
 };
 
 console.log(max([]));
