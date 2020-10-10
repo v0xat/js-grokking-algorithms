@@ -1,23 +1,21 @@
 const quicksort = (array) => {
-  if (array.length < 2) {
-    return array;
-  }
+  if (array.length < 2) return array;
 
   const pivot = array[0];
   const less = [];
   const greater = [];
   const arr = array.slice(1);
 
-  for (let i = 0; i < arr.length; i++) {
+  for (let i = 0; i < arr.length; i += 1) {
     if (arr[i] <= pivot) {
-      less[i] = arr[i];
+      less.push(arr[i]);
     }
     else {
-      greater[i] = arr[i];
+      greater.push(arr[i]);
     }
   }
 
   return quicksort(less).concat(pivot, quicksort(greater));
 };
 
-console.log(quicksort([10, 5, 2, 3]));
+console.log(quicksort([10, 5, -2, 3, 100, 113, 99, -5]));
