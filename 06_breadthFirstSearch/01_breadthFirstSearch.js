@@ -4,11 +4,11 @@ const person_is_seller = (name) => {
 
 const graph = {};
 graph['you'] = ['alice', 'bob', 'claire'];
-graph['bob'] = ['anuj', 'peggy'];
 graph['alice'] = ['peggy'];
+graph['bob'] = ['anuj', 'peggy'];
 graph['claire'] = ['thom', 'jonny'];
-graph['anuj'] = [];
 graph['peggy'] = [];
+graph['anuj'] = [];
 graph['thom'] = [];
 graph['jonny'] = [];
 
